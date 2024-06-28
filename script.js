@@ -1,5 +1,6 @@
 let gridSize=16;
- 
+ const gridBtn=document.querySelector('button');
+ gridBtn.addEventListener('click',newGrid)
 
 makeRow(gridSize);
 
@@ -29,4 +30,16 @@ function listenGrid(){
         let target= event.target;
         target.classList.add("sketched");
     })
+}
+
+function newGrid(){
+    let disowner=document.querySelector('#project-container');
+    while(disowner.firstChild){
+    disowner.removeChild(disowner.firstChild);
+}
+    const newGridSize= Number(prompt("Please enter new grid length/height."));
+        if (newGridSize<2 || newGridSize>100) {
+            newGrid();
+        }
+        makeRow(newGridSize);
 }
