@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-container{
+    display: flex;
+    flex-direction: column;
+    width: 95dvh;
+    height: 95dvh;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.row-div{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.column-div{
+    flex: 1;
+}
+
+.sketched{
+    background-color: blue;
+}
