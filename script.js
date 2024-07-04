@@ -28,7 +28,8 @@ function listenGrid(){
     let divEnter= document.querySelector('#project-container');
     divEnter.addEventListener('mouseover', (event)=>{
         let target= event.target;
-        target.classList.add("sketched");
+        //target.classList.add("sketched");
+        target.setAttribute("style",`background-color:rgb(${randColor()},${randColor()},${randColor()})`)
     })
 }
 
@@ -42,4 +43,8 @@ function newGrid(){
             newGrid();
         }
         makeRow(newGridSize);
+}
+
+function randColor(){
+    return Math.floor(Math.random()*256);
 }
